@@ -1,0 +1,110 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : May 29, 2023, 1:35:58 PM
+    Author     : cretu
+*/
+.wpstream-theme-toggle-switch{
+   position: relative;
+   display: inline-block;
+   width: 60px;
+   height: 25px;
+}
+.wpstream-theme-toggle-switch input{
+   opacity: 0;
+   width: 0;
+   height: 0;
+}
+.wpstream-theme-switch{
+   position: absolute;
+   cursor: pointer;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: #CCC;
+   -webkit-transition: .4s;
+   transition: .4s;
+   border-radius: 15px;
+   margin: unset;
+}
+.wpstream-theme-switch:before{
+   position: absolute;
+   content: "";
+   height: 17px;
+   width: 17px;
+   left: 4px;
+   bottom: 4px;
+   background-color: white;
+   -webkit-transition: .4s;
+   transition: .4s;
+   border-radius: 15px;
+}
+
+.wpstream-theme-toggle-switch input:checked + .wpstream-theme-switch .wpstream-theme-switch-on{
+      display: block;
+}
+.wpstream-theme-toggle-switch input:not(:checked) + .wpstream-theme-switch .wpstream-theme-switch-off{
+   display: block;
+}
+.wpstream-theme-switch-off,
+.wpstream-theme-switch-on{
+   display: none;
+   font-size: 11px;
+   line-height: 25px;
+   text-transform: uppercase;
+}
+
+.wpstream-theme-switch-off{
+   position: absolute;
+   right: 10px;
+}
+
+.wpstream-theme-switch-on{
+   position: absolute;
+   left: 10px;
+   color: #fff;
+}
+input:checked + .wpstream-theme-switch{
+   background-color: #2196F3;
+}
+
+input:focus + .wpstream-theme-switch{
+   box-shadow: 0 0 1px #2196F3;
+}
+input:checked + .wpstream-theme-switch:before{
+   -webkit-transform: translateX(35px);
+   -ms-transform: translateX(35px);
+   transform: translateX(35px);
+}
+.icon-preview img{
+   max-height: 20px;
+   height: auto;
+}
+.wpstream-bootstrap-select.bootstrap-select .dropdown-menu li a span.text{
+   white-space: normal;
+}
+.wpstream-separator-control{
+   margin: 1rem 0;
+   border-top: 5px solid rgba(0, 0, 0, .1);
+}
+.bootstrap-select .dropdown-menu{
+   max-height: 475px!important;
+}
+#customize-theme-controls .customize-pane-child.accordion-section-content{
+   min-height: 100%;
+}
+
+.customize-control-wpstream_slides_control .padding-margin-control{
+   display: flex;
+}
+.customize-control-wpstream_slides_control .padding-margin-control input,
+.customize-control-wpstream_slides_control .padding-margin-control .side-label{
+   text-align: center;
+}
+.customize-control-wpstream_slides_control .padding-margin-control .side-label{
+   width: 100%;
+   display: block;
+}
