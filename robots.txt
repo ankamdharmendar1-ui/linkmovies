@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ankamdharmendar1-ui.github.io/linkmovies/sitemap.xml
+Sitemap: https://www.moviesfun.in/sitemap.xml
