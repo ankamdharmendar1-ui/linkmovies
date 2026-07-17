@@ -230,32 +230,7 @@
     <div class="grid" id="grid"></div>
 </section>
 
-<!-- MODAL -->
-<div class="modal-bg" id="modal" onclick="bgClose(event)">
-    <div class="modal" id="modalBox">
-        <div class="modal-banner">
-            <img id="mBanner" src="" alt="">
-            <div class="modal-banner-overlay">
-                <h2 id="mTitle"></h2>
-                <div class="mmeta" id="mMeta"></div>
-            </div>
-            <button class="modal-close-btn" onclick="closeModal()"><i class="fas fa-times"></i></button>
-        </div>
-        <div class="modal-body">
-            <p class="modal-desc" id="mDesc"></p>
-            <div class="watch-btns">
-                <a id="mYTBtn" href="#" target="_blank" class="btn-yt" rel="noopener noreferrer">
-                    <i class="fab fa-youtube"></i> Watch Full Movie on YouTube
-                </a>
-            </div>
-            <div class="embed-note">
-                <i class="fas fa-info-circle"></i>
-                Click the button above "” YouTube will open and play the full movie instantly, free and HD.
-                Click the button above - YouTube will open and play the full movie instantly, free and HD.
-            </div>
-        </div>
-    </div>
-</div>
+
 
 <!-- ✅ BLOG ARTICLES SECTION -->
 <section class="section" style="max-width:1100px;margin:40px auto 0;">
@@ -311,11 +286,11 @@
         </a>
         <a href="secret-mathematical-formulas-perfect-comedy-script.html" style="background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:20px; color:#fff; text-decoration:none; display:block;">
             <h3 style="margin-bottom:8px; font-size:1.15rem; color:#fff;"><i class="fas fa-file-alt" style="color:var(--accent); margin-right:8px;"></i>The Secret Mathematical Formulas Used to Write the Perfect Comedy Script</h3>
-            <p style="color:var(--muted); font-size:0.95rem; margin:0;">Comedy isn't just about being naturally funny. It's about rhythm, misdirection, and cold, hard math.</p>
+            <p style="color:var(--muted); font-size:0.95rem; margin:0;">Comedy isn't just about being naturally funny. it's about rhythm, misdirection, and cold, hard math.</p>
         </a>
         <a href="weather-lighting-silent-characters-suspense-thrillers.html" style="background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:20px; color:#fff; text-decoration:none; display:block;">
             <h3 style="margin-bottom:8px; font-size:1.15rem; color:#fff;"><i class="fas fa-file-alt" style="color:var(--accent); margin-right:8px;"></i>How Weather and Lighting Are Used as Silent Characters in Suspense Thrillers</h3>
-            <p style="color:var(--muted); font-size:0.95rem; margin:0;">Ever wonder why it's always raining when the detective solves the case? It's all by design.</p>
+            <p style="color:var(--muted); font-size:0.95rem; margin:0;">Ever wonder why it's always raining when the detective solves the case? it's all by design.</p>
         </a>
         <a href="most-expensive-unscripted-mistakes-cinema-history.html" style="background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:20px; color:#fff; text-decoration:none; display:block;">
             <h3 style="margin-bottom:8px; font-size:1.15rem; color:#fff;"><i class="fas fa-file-alt" style="color:var(--accent); margin-right:8px;"></i>The True Story Behind the Most Expensive Unscripted Mistakes in Cinema History</h3>
@@ -364,7 +339,7 @@
 
         <p style="color:#999;font-size:1rem;margin-bottom:18px;">Thousands of fans trust MoviesFun because we offer a clean, ad-light experience. Unlike other sites cluttered with pop-ups and redirects, we keep things simple. Every <strong style="color:#f0f0f0;">south movie hindi dubbed full HD</strong> on our site streams directly from YouTube "” so you get reliable, buffer-free playback on any device. No downloads, no apps, no hassle. Just search, click, and enjoy your favourite <strong style="color:#f0f0f0;">south blockbuster hindi dubbed</strong> movie in seconds.</p>
 
-        <p style="color:#999;font-size:1rem;margin-bottom:0;">Bookmark MoviesFun today and never miss another <strong style="color:#f0f0f0;">new south indian movie in hindi</strong>. Happy watching! ðŸŽ¬</p>
+        <p style="color:#999;font-size:1rem;margin-bottom:0;">Bookmark MoviesFun today and never miss another <strong style="color:#f0f0f0;">new south indian movie in hindi</strong>. Happy watching! &#127916;</p>
 
     </div>
 </section>
@@ -378,7 +353,7 @@
         <a href="privacy-Policy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Service</a>
     </div>
-    <p>ðŸŽ¬ <strong>MoviesFun</strong> "” All movies stream from <a href="https://youtube.com" target="_blank">YouTube</a> official channels. &copy; 2026 MoviesFun</p>
+    <p>&#127916; <strong>MoviesFun</strong> "” All movies stream from <a href="https://youtube.com" target="_blank">YouTube</a> official channels. &copy; 2026 MoviesFun</p>
 </footer>
 
 <script>
@@ -462,7 +437,7 @@ function mkCard(m) {
     const g = m.genre.charAt(0).toUpperCase() + m.genre.slice(1);
     const safe = m.title.replace(/'/g, "\\'");
     return `
-    <div class="card" onclick="openModal('${m.id}')">
+    <a href="movie-${m.id}.html" class="card" style="text-decoration:none; display:block;">
         <div class="thumb">
             <img src="https://img.youtube.com/vi/${m.id}/maxresdefault.jpg"
                  alt="${m.title}" loading="lazy"
@@ -479,7 +454,7 @@ function mkCard(m) {
                 <span class="yr">${m.year}</span>
             </div>
         </div>
-    </div>`;
+    </a>`;
 }
 
 // â”€â”€ Render â”€â”€
@@ -509,45 +484,7 @@ function search(q) {
     render(MOVIES.filter(m => (curFilter === 'all' || m.genre === curFilter) && m.title.toLowerCase().includes(q.toLowerCase())));
 }
 
-// â”€â”€ Modal â”€â”€
-function openModal(id) {
-    const m = MOVIES.find(x => x.id === id);
-    if (!m) return;
 
-    // Set banner thumbnail with fallback chain
-    const banner = document.getElementById('mBanner');
-    banner.style.display = 'block';
-    banner.onerror = () => thumbErr(banner, id, 0);
-    banner.src = `https://img.youtube.com/vi/${id}/maxresdefault.jpg`;
-
-    // Fill modal content
-    document.getElementById('mTitle').textContent = m.title;
-    document.getElementById('mDesc').textContent = m.desc || 'An exciting Hindi dubbed movie. Click Watch on YouTube to enjoy.';
-    document.getElementById('mYTBtn').href = `https://www.youtube.com/watch?v=${id}`;
-
-    const g = m.genre.charAt(0).toUpperCase() + m.genre.slice(1);
-    document.getElementById('mMeta').innerHTML = `
-        <span class="gtag ${GCLASS[m.genre] || ''}">${g}</span>
-        <span style="color:var(--accent2);font-size:.8rem;font-weight:700;display:flex;align-items:center;gap:4px;">
-            <i class="fas fa-star"></i> ${m.rating}
-        </span>
-        <span style="color:var(--muted);font-size:.8rem;">${m.year}</span>
-        <span style="background:var(--accent);color:#fff;font-size:.65rem;font-weight:900;padding:2px 7px;border-radius:4px;">${m.quality}</span>
-    `;
-
-    // Show modal
-    document.getElementById('modal').classList.add('open');
-    document.body.style.overflow = 'hidden';
-}
-
-function closeModal() {
-    document.getElementById('modal').classList.remove('open');
-    document.body.style.overflow = '';
-}
-
-function bgClose(e) { if (e.target === document.getElementById('modal')) closeModal(); }
-
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
 // Initial render
 render(MOVIES);
