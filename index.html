@@ -623,7 +623,7 @@ function mkCard(m) {
         <div class="card-info">
             <div class="card-title">${m.title}</div>
             <div class="card-meta">
-                <span class="gtag ${GCLASS[m.genre]||''}">${g}</span>
+                <span class="gtag ${GCLASS[m.genre.toLowerCase()]||'g-action'}">${g}</span>
                 <span class="yr">${m.year}</span>
             </div>
         </div>
