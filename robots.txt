@@ -1,4 +1,41 @@
 User-agent: *
-Allow: /
+# Allow homepage and all movie pages
+Allow: /index.html
+Allow: /movie-*.html
+
+# Allow essential legal and trust pages
+Allow: /about.html
+Allow: /contact.html
+Allow: /terms.html
+Allow: /privacy-Policy.html
+Allow: /disclaimer.html
+Allow: /dmca.html
+
+# Block auto-generated article pages (thin content)
+Disallow: /color-grading-psychology-cinema.html
+Disallow: /aspect-ratio-evolution-filmmaking.html
+Disallow: /foley-art-sound-design-movies.html
+Disallow: /practical-effects-vs-cgi-debate.html
+Disallow: /mise-en-scene-visual-storytelling.html
+Disallow: /180-degree-rule-cinematography-explained.html
+Disallow: /imax-vs-standard-cinema-cameras-difference.html
+Disallow: /rule-of-thirds-cinematography-psychology.html
+Disallow: /hollywood-film-cameras-vs-digital-dominance.html
+Disallow: /depth-of-field-trick-cinematography-focus.html
+Disallow: /hidden-hierarchy-film-set-organization.html
+Disallow: /real-role-of-movie-producer.html
+Disallow: /director-vs-producer-who-controls-movie.html
+Disallow: /expensive-mistakes-on-film-set.html
+Disallow: /indie-filmmakers-shoot-blockbusters-micro-budget.html
+Disallow: /why-movies-are-never-shot-in-order.html
+Disallow: /first-assistant-director-stressful-job.html
+Disallow: /continuity-errors-why-masterpieces-have-mistakes.html
+Disallow: /pre-production-secrets-before-camera-rolls.html
+Disallow: /unsung-heroes-grips-gaffers-best-boys.html
+
+# Block Python generator scripts
+Disallow: /generate_10_filmmaking_articles.py
+Disallow: /generate_5_camera_articles.py
+Disallow: /generate_pages.py
 
 Sitemap: https://www.moviesfun.in/sitemap.xml
