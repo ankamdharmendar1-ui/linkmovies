@@ -213,10 +213,13 @@
 
 <!-- NAVBAR -->
 <nav class="navbar">
-    <a class="brand" href="#">
+    <a class="brand" href="index.html">
         <i class="fas fa-film"></i>
         <span><span style="color:#ffffff;">Movies</span><b>Fun</b></span>
     </a>
+    <div class="nav-links">
+        <a href="index.html" class="active" style="display:flex; align-items:center; gap:6px;"><i class="fas fa-home"></i> Home</a>
+    </div>
 
     <input class="search-box" type="text" placeholder="Ã°Å¸â€Â Search movies..." oninput="search(this.value)">
 </nav>
@@ -318,7 +321,8 @@
 // Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
 // MOVIES  (YouTube video IDs  -  all publicly available)
 // Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
-const MOVIES = [    { id: '-XZTy092a7w', slug: '-XZTy092a7w', title:'The DON | New South Indian Hindi Dubbed Movie | Mahesh Babu, Sreeleela, Keerthi Shetty Sai Pallavi', genre:'action', year:'2026', rating:'8.0', quality:'HD', desc:'Dive into this action-packed South Indian blockbuster starring Mahesh Babu and Sreeleela. The DON is a thrilling ride filled with spectacular fight sequences and an engaging storyline that keeps you glued to your screen. Catch all the high-octane drama now dubbed in Hindi for free.' },
+const MOVIES = [
+    { id: '-XZTy092a7w', slug: '-XZTy092a7w', title:'The DON | New South Indian Hindi Dubbed Movie | Mahesh Babu, Sreeleela, Keerthi Shetty Sai Pallavi', genre:'action', year:'2026', rating:'8.0', quality:'HD', desc:'Dive into this action-packed South Indian blockbuster starring Mahesh Babu and Sreeleela. The DON is a thrilling ride filled with spectacular fight sequences and an engaging storyline that keeps you glued to your screen. Catch all the high-octane drama now dubbed in Hindi for free.' },
     { id: 'OpobJ8hzNUM', slug: 'OpobJ8hzNUM', title:'A1 EXPRESS - Hindi Dubbed Full Movie | Sundeep Kishan, Lavanya Tripathi | Action Romantic Movie', genre:'action', year:'2026', rating:'8.0', quality:'HD', desc:'Experience the intense sports drama in A1 Express, starring Sundeep Kishan and Lavanya Tripathi. This Hindi dubbed movie beautifully blends romance with adrenaline-pumping hockey matches. It&#39;s a must-watch for fans of South Indian cinema looking for a gripping, emotional journey.' },
     { id: 'YLFtx_WaZCQ', slug: 'YLFtx_WaZCQ', title:'New Released &quot;Super Taxi (2026)&quot; Horror Thriller South Hindi Dubbed Movie | Vijay Deverakonda', genre:'thriller', year:'2026', rating:'8.0', quality:'HD', desc:'Get ready for a spine-chilling ride in Super Taxi, a gripping horror thriller starring Vijay Deverakonda. With mysterious twists, intense suspense, and top-tier acting, this newly released South Indian movie will keep you on the edge of your seat from start to finish.' },
     { id: 'paMqUyLApvc', slug: 'paMqUyLApvc', title:'Meri Maa (Rathnan Prapancha) 2025 South Hindi Dubbed Drama Comedy Movie | Dhananjay, Reba M John', genre:'comedy', year:'2026', rating:'8.0', quality:'HD', desc:'Enjoy a heartwarming and hilarious adventure with Meri Maa (Rathnan Prapancha). Starring Dhananjay and Reba M John, this brilliant drama-comedy takes you on an emotional yet funny journey of a man discovering his roots. Perfectly dubbed in Hindi for your entertainment.' },
