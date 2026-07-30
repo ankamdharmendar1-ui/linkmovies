@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -445,7 +445,7 @@ function mkCard(m) {
     const g = m.genre.charAt(0).toUpperCase() + m.genre.slice(1);
     const safe = m.title.replace(/'/g, "\\'");
     return `
-    <a href="movie-${m.slug}.html" class="card" style="text-decoration:none; display:block;">
+    <a href="movie-${m.slug || m.id}.html" class="card" style="text-decoration:none; display:block;">
         <div class="thumb">
             <img src="https://img.youtube.com/vi/${m.id}/maxresdefault.jpg"
                  alt="${m.title}" loading="lazy"
